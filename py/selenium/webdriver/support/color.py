@@ -16,7 +16,10 @@
 # under the License.
 
 import sys
-from typing import Any, Optional, Sequence, TYPE_CHECKING
+from typing import TYPE_CHECKING
+from typing import Any
+from typing import Optional
+from typing import Sequence
 
 if sys.version_info >= (3, 9):
     from re import Match
@@ -24,7 +27,10 @@ else:
     from typing import Match
 
 if TYPE_CHECKING:
-    from typing import SupportsInt, SupportsFloat, Union
+    from typing import SupportsFloat
+    from typing import SupportsInt
+    from typing import Union
+
     from typing_extensions import SupportsIndex
 
     ParseableFloat = Union[SupportsFloat, SupportsIndex, str, bytes, bytearray]
@@ -35,7 +41,9 @@ else:
 
 
 RGB_PATTERN = r"^\s*rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*\)\s*$"
-RGB_PCT_PATTERN = r"^\s*rgb\(\s*(\d{1,3}|\d{1,2}\.\d+)%\s*,\s*(\d{1,3}|\d{1,2}\.\d+)%\s*,\s*(\d{1,3}|\d{1,2}\.\d+)%\s*\)\s*$"
+RGB_PCT_PATTERN = (
+    r"^\s*rgb\(\s*(\d{1,3}|\d{1,2}\.\d+)%\s*,\s*(\d{1,3}|\d{1,2}\.\d+)%\s*,\s*(\d{1,3}|\d{1,2}\.\d+)%\s*\)\s*$"
+)
 RGBA_PATTERN = r"^\s*rgba\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(0|1|0\.\d+)\s*\)\s*$"
 RGBA_PCT_PATTERN = r"^\s*rgba\(\s*(\d{1,3}|\d{1,2}\.\d+)%\s*,\s*(\d{1,3}|\d{1,2}\.\d+)%\s*,\s*(\d{1,3}|\d{1,2}\.\d+)%\s*,\s*(0|1|0\.\d+)\s*\)\s*$"
 HEX_PATTERN = r"#([A-Fa-f0-9]{2})([A-Fa-f0-9]{2})([A-Fa-f0-9]{2})"
@@ -123,7 +131,7 @@ class Color(object):
                     hue -= 1
 
                 if hue < 1.0 / 6.0:
-                    return (lum1 + (lum2 - lum1) * 6.0 * hue)
+                    return lum1 + (lum2 - lum1) * 6.0 * hue
                 elif hue < 1.0 / 2.0:
                     return lum2
                 elif hue < 2.0 / 3.0:
@@ -327,5 +335,5 @@ Colors = {
     "WHITE": Color(255, 255, 255),
     "WHITESMOKE": Color(245, 245, 245),
     "YELLOW": Color(255, 255, 0),
-    "YELLOWGREEN": Color(154, 205, 50)
+    "YELLOWGREEN": Color(154, 205, 50),
 }

@@ -1,0 +1,31 @@
+[tool.isort]
+profile = 'black'
+multi_line_output = 3
+include_trailing_comma = 'True'
+force_grid_wrap = 0
+use_parentheses = 'True'
+ensure_newline_before_comments = 'True'
+line_length = 120
+force_single_line = 'True'
+known_first_party = 'selenium/'
+default_section = 'THIRDPARTY'
+forced_separate = 'test'
+skip = '.tox,.eggs,ci/templates'
+
+[tool.mypy]
+mypy_path = 'selenium/'
+check_untyped_defs = 'True'
+disallow_any_generics = 'True'
+ignore_missing_imports = 'False'
+show_error_codes = 'True'
+strict_equality = 'True'
+warn_redundant_casts = 'True'
+warn_return_any = 'False'
+warn_unreachable = 'True'
+warn_unused_configs = 'True'
+no_implicit_reexport = 'False'
+ignore_errors = 'False'
+
+[tool.black]
+target-version = ['py37']
+line-length = 120

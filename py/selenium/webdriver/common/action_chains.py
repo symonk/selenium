@@ -19,8 +19,8 @@
 The ActionChains implementation,
 """
 
-from .utils import keys_to_typing
 from .actions.action_builder import ActionBuilder
+from .utils import keys_to_typing
 
 
 class ActionChains(object):
@@ -261,15 +261,13 @@ class ActionChains(object):
          - yoffset: Y offset to move to.
         """
 
-        self.w3c_actions.pointer_action.move_to(to_element,
-                                                int(xoffset),
-                                                int(yoffset))
+        self.w3c_actions.pointer_action.move_to(to_element, int(xoffset), int(yoffset))
         self.w3c_actions.key_action.pause()
 
         return self
 
     def pause(self, seconds):
-        """ Pause all inputs for the specified duration in seconds """
+        """Pause all inputs for the specified duration in seconds"""
 
         self.w3c_actions.pointer_action.pause(seconds)
         self.w3c_actions.key_action.pause(seconds)
@@ -331,8 +329,9 @@ class ActionChains(object):
          - delta_x: the distance the mouse will scroll on the x axis
          - delta_y: the distance the mouse will scroll on the y axis
         """
-        self.w3c_actions.wheel_action.scroll(x=x, y=y, delta_x=delta_x, delta_y=delta_y,
-                                             duration=duration, origin=origin)
+        self.w3c_actions.wheel_action.scroll(
+            x=x, y=y, delta_x=delta_x, delta_y=delta_y, duration=duration, origin=origin
+        )
         return self
 
     # Context manager so ActionChains can be used in a 'with .. as' statements.

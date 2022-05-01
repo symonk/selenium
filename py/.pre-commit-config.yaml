@@ -1,0 +1,48 @@
+default_language_version:
+  python: python3.7
+files: ^py/(selenium|test)*.py
+exclude: ^(.tox|docs|.venv|.mypy_cache|.pytest_cache|private|dist|ci/templates|)(/|$)
+repos:
+  - repo: https://github.com/ambv/black
+    rev: fb8dfdeec5fd76cc0c30f881d6fc75851139d80a
+    hooks:
+      - id: black
+        args:
+          - '--safe'
+          - '--quiet'
+          - '--line-length=120'
+          - '--target-version=py37'
+        language_version: python3.7
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: f5c26753e4c8a1f45b9d7edefa976fe4ea932e26
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-case-conflict
+      - id: check-docstring-first
+      - id: debug-statements
+      - id: detect-private-key
+      - id: requirements-txt-fixer
+  - repo: https://github.com/pre-commit/mirrors-isort
+    rev: 32119baf69e913a72f2e1b1fbe0d56921b670ebb
+    hooks:
+      - id: isort
+        args:
+          - "--settings"
+          - "py/pyproject.toml"
+  - repo: https://github.com/PyCQA/flake8
+    rev: 59574795721e3cbb4f439cbe29b531d603038cc0
+    hooks:
+      - id: flake8
+        args: ["--config", "py/setup.cfg", "--max-line-length=120"]
+  - repo: https://github.com/hadialqattan/pycln
+    rev: v1.3.2
+    hooks:
+      - id: pycln
+  # selenium is in no position to use mypy widely just yet.
+  # - repo: https://github.com/pre-commit/mirrors-mypy
+  #  rev: v0.950
+  #  hooks:
+  #    - id: mypy
+  #      files: selenium/

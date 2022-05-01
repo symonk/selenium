@@ -14,11 +14,12 @@
 # KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
-from .input_device import InputDevice
-from .interaction import POINTER, POINTER_KINDS
-
 from selenium.common.exceptions import InvalidArgumentException
 from selenium.webdriver.remote.webelement import WebElement
+
+from .input_device import InputDevice
+from .interaction import POINTER
+from .interaction import POINTER_KINDS
 
 
 class PointerInput(InputDevice):
@@ -60,10 +61,12 @@ class PointerInput(InputDevice):
         self.add_action({"type": "pause", "duration": int(pause_duration * 1000)})
 
     def encode(self):
-        return {"type": self.type,
-                "parameters": {"pointerType": self.kind},
-                "id": self.name,
-                "actions": [acts for acts in self.actions]}
+        return {
+            "type": self.type,
+            "parameters": {"pointerType": self.kind},
+            "id": self.name,
+            "actions": [acts for acts in self.actions],
+        }
 
     def _convert_keys(self, actions):
         out = {}
@@ -73,7 +76,7 @@ class PointerInput(InputDevice):
             if k == "x" or k == "y":
                 out[k] = int(actions[k])
                 continue
-            splits = k.split('_')
-            new_key = splits[0] + ''.join(v.title() for v in splits[1:])
+            splits = k.split("_")
+            new_key = splits[0] + "".join(v.title() for v in splits[1:])
             out[new_key] = actions[k]
         return out

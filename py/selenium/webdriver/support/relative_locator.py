@@ -15,14 +15,17 @@
 # specific language governing permissions and limitations
 # under the License.
 
+from __future__ import annotations
 
+import functools
+import typing
 from typing import Dict, List, Union
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 
 
-def with_tag_name(tag_name: str) -> "RelativeBy":
+def with_tag_name(tag_name: str) -> RelativeBy:
     """
         Start searching for relative objects using a tag name.
 
@@ -36,10 +39,10 @@ def with_tag_name(tag_name: str) -> "RelativeBy":
     """
     if not tag_name:
         raise WebDriverException("tag_name can not be null")
-    return RelativeBy({"css selector": tag_name})
+    return RelativeBy({By.CSS_SELECTOR: tag_name})
 
 
-def locate_with(by: By, using: str) -> "RelativeBy":
+def locate_with(by: By, using: str) -> RelativeBy:
     """
         Start searching for relative objects your search criteria with By.
 
@@ -58,7 +61,7 @@ def locate_with(by: By, using: str) -> "RelativeBy":
 class RelativeBy:
     """
         Gives the opportunity to find elements based on their relative location
-        on the page from a root elelemt. It is recommended that you use the helper
+        on the page from a root element. It is recommended that you use the helper
         function to create it.
 
         Example:
@@ -71,7 +74,7 @@ class RelativeBy:
             assert "mid" in ids
     """
 
-    def __init__(self, root: Dict[By, str] = None, filters: List = None):
+    def __init__(self, root: Dict[By, str] = None, filters: typing.Optional[List] = None):
         """
             Creates a new RelativeBy object. It is preferred if you use the
             `locate_with` method as this signature could change.
@@ -83,63 +86,48 @@ class RelativeBy:
         self.root = root
         self.filters = filters or []
 
-    def above(self, element_or_locator: Union[WebElement, Dict] = None) -> "RelativeBy":
+    def above(self, element_or_locator: Union[WebElement, Dict]) -> RelativeBy:
         """
             Add a filter to look for elements above.
             :Args:
                 - element_or_locator: Element to look above
         """
-        if not element_or_locator:
-            raise WebDriverException("Element or locator must be given when calling above method")
-
         self.filters.append({"kind": "above", "args": [element_or_locator]})
         return self
 
-    def below(self, element_or_locator: Union[WebElement, Dict] = None) -> "RelativeBy":
+    def below(self, element_or_locator: Union[WebElement, Dict]) -> RelativeBy:
         """
             Add a filter to look for elements below.
             :Args:
                 - element_or_locator: Element to look below
         """
-        if not element_or_locator:
-            raise WebDriverException("Element or locator must be given when calling above method")
-
         self.filters.append({"kind": "below", "args": [element_or_locator]})
         return self
 
-    def to_left_of(self, element_or_locator: Union[WebElement, Dict] = None) -> "RelativeBy":
+    def to_left_of(self, element_or_locator: Union[WebElement, Dict]) -> RelativeBy:
         """
             Add a filter to look for elements to the left of.
             :Args:
                 - element_or_locator: Element to look to the left of
         """
-        if not element_or_locator:
-            raise WebDriverException("Element or locator must be given when calling above method")
-
         self.filters.append({"kind": "left", "args": [element_or_locator]})
         return self
 
-    def to_right_of(self, element_or_locator: Union[WebElement, Dict] = None) -> "RelativeBy":
+    def to_right_of(self, element_or_locator: Union[WebElement, Dict]) -> RelativeBy:
         """
             Add a filter to look for elements right of.
             :Args:
                 - element_or_locator: Element to look right of
         """
-        if not element_or_locator:
-            raise WebDriverException("Element or locator must be given when calling above method")
-
         self.filters.append({"kind": "right", "args": [element_or_locator]})
         return self
 
-    def near(self, element_or_locator_distance: Union[WebElement, Dict, int] = None) -> "RelativeBy":
+    def near(self, element_or_locator_distance: Union[WebElement, Dict, int]) -> RelativeBy:
         """
             Add a filter to look for elements near.
             :Args:
-                - element_or_locator_distance: Element to look near by the element or within a distance
+                - element_or_locator_distance: Element to look near the element or within a distance
         """
-        if not element_or_locator_distance:
-            raise WebDriverException("Element or locator or distance must be given when calling above method")
-
         self.filters.append({"kind": "near", "args": [element_or_locator_distance]})
         return self
 

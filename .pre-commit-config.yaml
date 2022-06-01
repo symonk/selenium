@@ -1,0 +1,40 @@
+files: '^(py/.*)'
+default_language_version:
+  python: python3.7
+repos:
+-   repo: https://github.com/ambv/black
+    rev: 1e557184b0a9f43bfbff862669966bc5328517e9
+    hooks:
+    -   id: black
+        args:
+        - --safe
+        - --quiet
+        - --line-length=120
+        language_version: python3.7
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: 08792de8d1c685bbfb442dbbbacef2f3e6f4a546
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: check-case-conflict
+    -   id: check-docstring-first
+    -   id: debug-statements
+    -   id: detect-private-key
+    -   id: requirements-txt-fixer
+-   repo: https://github.com/pre-commit/mirrors-isort
+    rev: 32119baf69e913a72f2e1b1fbe0d56921b670ebb
+    hooks:
+    -   id: isort
+-   repo: https://github.com/PyCQA/flake8
+    rev: 1c85f3d07c3aadf597db205dff597da2987745f7
+    hooks:
+    -   id: flake8
+        args:
+        - --max-line-length=120
+-   repo: https://github.com/hadialqattan/pycln
+    rev: dc035b2e39c6e127d64377c2db6df6dadfab12d7
+    hooks:
+    -   id: pycln
+        args:
+        - --config=py/pyproject.toml

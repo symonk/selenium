@@ -3,27 +3,18 @@
 
 .. automodule:: selenium.webdriver.support.color
 
-   
-   
-   
 
-   
-   
-   
 
-   
-   
+
+
+
+
+
+
+
+
    .. rubric:: Classes
 
    .. autosummary::
-   
+
       Color
-   
-   
-
-   
-   
-   
-
-
-

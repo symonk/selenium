@@ -3,28 +3,19 @@
 
 .. automodule:: selenium.webdriver.opera.options
 
-   
-   
-   
 
-   
-   
-   
 
-   
-   
+
+
+
+
+
+
+
+
    .. rubric:: Classes
 
    .. autosummary::
-   
+
       AndroidOptions
       Options
-   
-   
-
-   
-   
-   
-
-
-

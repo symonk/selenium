@@ -3,27 +3,18 @@
 
 .. automodule:: selenium.webdriver.firefox.firefox_binary
 
-   
-   
-   
 
-   
-   
-   
 
-   
-   
+
+
+
+
+
+
+
+
    .. rubric:: Classes
 
    .. autosummary::
-   
+
       FirefoxBinary
-   
-   
-
-   
-   
-   
-
-
-

@@ -3,33 +3,28 @@
 
 .. automodule:: selenium.webdriver.firefox.extension_connection
 
-   
-   
-   
 
-   
-   
-   
 
-   
-   
+
+
+
+
+
+
+
+
    .. rubric:: Classes
 
    .. autosummary::
-   
-      ExtensionConnection
-   
-   
 
-   
-   
+      ExtensionConnection
+
+
+
+
+
    .. rubric:: Exceptions
 
    .. autosummary::
-   
+
       ExtensionConnectionError
-   
-   
-
-
-

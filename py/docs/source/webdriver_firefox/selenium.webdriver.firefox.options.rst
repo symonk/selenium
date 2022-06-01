@@ -3,28 +3,19 @@
 
 .. automodule:: selenium.webdriver.firefox.options
 
-   
-   
-   
 
-   
-   
-   
 
-   
-   
+
+
+
+
+
+
+
+
    .. rubric:: Classes
 
    .. autosummary::
-   
+
       Log
       Options
-   
-   
-
-   
-   
-   
-
-
-

@@ -3,27 +3,18 @@
 
 .. automodule:: selenium.webdriver.ie.service
 
-   
-   
-   
 
-   
-   
-   
 
-   
-   
+
+
+
+
+
+
+
+
    .. rubric:: Classes
 
    .. autosummary::
-   
+
       Service
-   
-   
-
-   
-   
-   
-
-
-

@@ -3,27 +3,18 @@
 
 .. automodule:: selenium.webdriver.remote.command
 
-   
-   
-   
 
-   
-   
-   
 
-   
-   
+
+
+
+
+
+
+
+
    .. rubric:: Classes
 
    .. autosummary::
-   
+
       Command
-   
-   
-
-   
-   
-   
-
-
-

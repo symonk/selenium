@@ -7,6 +7,7 @@ filterwarnings = [
 ]
 
 [tool.isort]
+profile = "black"
 multi_line_output = 3
 include_trailing_comma = 'True'
 force_grid_wrap = 0
@@ -20,7 +21,7 @@ forced_separate = 'tests'
 skip = '.tox,.eggs,ci/templates'
 
 [tool.mypy]
-mypy_path = '/py'
+mypy_path = '/selenium'
 check_untyped_defs = 'True'
 disallow_any_generics = 'True'
 ignore_missing_imports = 'False'

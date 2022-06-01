@@ -3,27 +3,18 @@
 
 .. automodule:: selenium.webdriver.webkitgtk.options
 
-   
-   
-   
 
-   
-   
-   
 
-   
-   
+
+
+
+
+
+
+
+
    .. rubric:: Classes
 
    .. autosummary::
-   
+
       Options
-   
-   
-
-   
-   
-   
-
-
-

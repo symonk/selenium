@@ -3,27 +3,18 @@
 
 .. automodule:: selenium.webdriver.remote.script_key
 
-   
-   
-   
 
-   
-   
-   
 
-   
-   
+
+
+
+
+
+
+
+
    .. rubric:: Classes
 
    .. autosummary::
-   
+
       ScriptKey
-   
-   
-
-   
-   
-   
-
-
-

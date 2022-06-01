@@ -3,33 +3,28 @@
 
 .. automodule:: selenium.webdriver.firefox.firefox_profile
 
-   
-   
-   
 
-   
-   
-   
 
-   
-   
+
+
+
+
+
+
+
+
    .. rubric:: Classes
 
    .. autosummary::
-   
-      FirefoxProfile
-   
-   
 
-   
-   
+      FirefoxProfile
+
+
+
+
+
    .. rubric:: Exceptions
 
    .. autosummary::
-   
+
       AddonFormatError
-   
-   
-
-
-

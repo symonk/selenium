@@ -3,27 +3,18 @@
 
 .. automodule:: selenium.webdriver.remote.switch_to
 
-   
-   
-   
 
-   
-   
-   
 
-   
-   
+
+
+
+
+
+
+
+
    .. rubric:: Classes
 
    .. autosummary::
-   
+
       SwitchTo
-   
-   
-
-   
-   
-   
-
-
-

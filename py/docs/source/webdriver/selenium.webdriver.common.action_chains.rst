@@ -3,27 +3,18 @@
 
 .. automodule:: selenium.webdriver.common.action_chains
 
-   
-   
-   
 
-   
-   
-   
 
-   
-   
+
+
+
+
+
+
+
+
    .. rubric:: Classes
 
    .. autosummary::
-   
+
       ActionChains
-   
-   
-
-   
-   
-   
-
-
-

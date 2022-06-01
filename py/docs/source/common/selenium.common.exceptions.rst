@@ -3,24 +3,24 @@
 
 .. automodule:: selenium.common.exceptions
 
+   
+   
+   
 
+   
+   
+   
 
+   
+   
+   
 
-
-
-
-
-
-
-
-
-
-
-
+   
+   
    .. rubric:: Exceptions
 
    .. autosummary::
-
+   
       ElementClickInterceptedException
       ElementNotInteractableException
       ElementNotSelectableException
@@ -54,3 +54,8 @@
       UnexpectedTagNameException
       UnknownMethodException
       WebDriverException
+   
+   
+
+
+

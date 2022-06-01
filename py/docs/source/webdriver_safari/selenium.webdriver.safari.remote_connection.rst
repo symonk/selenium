@@ -3,18 +3,27 @@
 
 .. automodule:: selenium.webdriver.safari.remote_connection
 
+   
+   
+   
 
+   
+   
+   
 
-
-
-
-
-
-
-
-
+   
+   
    .. rubric:: Classes
 
    .. autosummary::
-
+   
       SafariRemoteConnection
+   
+   
+
+   
+   
+   
+
+
+

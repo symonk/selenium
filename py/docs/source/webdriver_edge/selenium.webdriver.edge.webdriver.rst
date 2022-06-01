@@ -3,18 +3,27 @@
 
 .. automodule:: selenium.webdriver.edge.webdriver
 
+   
+   
+   
 
+   
+   
+   
 
-
-
-
-
-
-
-
-
+   
+   
    .. rubric:: Classes
 
    .. autosummary::
-
+   
       WebDriver
+   
+   
+
+   
+   
+   
+
+
+

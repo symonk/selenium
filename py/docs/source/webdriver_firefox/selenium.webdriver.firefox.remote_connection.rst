@@ -3,18 +3,27 @@
 
 .. automodule:: selenium.webdriver.firefox.remote_connection
 
+   
+   
+   
 
+   
+   
+   
 
-
-
-
-
-
-
-
-
+   
+   
    .. rubric:: Classes
 
    .. autosummary::
-
+   
       FirefoxRemoteConnection
+   
+   
+
+   
+   
+   
+
+
+

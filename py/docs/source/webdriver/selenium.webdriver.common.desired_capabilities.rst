@@ -3,18 +3,27 @@
 
 .. automodule:: selenium.webdriver.common.desired_capabilities
 
+   
+   
+   
 
+   
+   
+   
 
-
-
-
-
-
-
-
-
+   
+   
    .. rubric:: Classes
 
    .. autosummary::
-
+   
       DesiredCapabilities
+   
+   
+
+   
+   
+   
+
+
+
